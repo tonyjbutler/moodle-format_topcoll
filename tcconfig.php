@@ -44,7 +44,7 @@ $TCCFG = new stdClass();
 // 7 => No 'Toggle' word, no 'Topic x' / 'Week x'  and no section number.
 
 // Default layout to use - used when a new Collapsed Topics course is created or an old one is accessed for the first time after installing this functionality introduced in CONTRIB-3378.
-$TCCFG->defaultlayoutelement = 1;
+$TCCFG->defaultlayoutelement = 7;
 
 // Structure configuration.
 // Here so you can see what numbers in the array represent what structure for setting the default value below.
@@ -58,11 +58,11 @@ $TCCFG->defaultlayoutstructure = 1;
 
 // Toggle colours per course - CONTRIB-3529.
 // Default toggle foreground colour in hexidecimal RGB without preceeding '#'.
-$TCCFG->defaulttgfgcolour = '000000';
+$TCCFG->defaulttgfgcolour = 'F4F6F8';
 
 // Default toggle background colour in hexidecimal RGB without preceeding '#'.
-$TCCFG->defaulttgbgcolour = 'e2e2f2';
+$TCCFG->defaulttgbgcolour = '393939';
 
 // Default toggle background hover colour in hexidecimal RGB without preceeding '#'.
-$TCCFG->defaulttgbghvrcolour = 'eeeeff';
+$TCCFG->defaulttgbghvrcolour = '234B6F';
 ?>

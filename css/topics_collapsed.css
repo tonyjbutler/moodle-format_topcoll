@@ -31,31 +31,36 @@
 /* -- The Toggle's row -- */
 tr.cps {
   display: table-row;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
 }
 
 /* -- The table data section of a Toggle's row -- */
 tr.cps td {
-  font-size: 0.8em;
   text-align: left;
   padding: 0 0;
   width: auto;
   line-height: 1.3em;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
 }
 
 /* -- The topic summary text -- */    
 tr.cps td span {
-  font-size: 1.2em;
-  font-style: italic;
+  font-size: 108%;
+  font-weight: bold;
   text-align: left;
 }
 
 /* -- For when no summary is entered */       
 tr.cps td a.cps_nosumm {
-   text-align: center;
+   text-align: left;
 }  
 
 /* -- For centring the 'Topic x' text -- */       
-tr.cps td.cps_centre {
+td.cps_centre {
      text-align: center;
      font-size: 0.6em;
 }  
@@ -64,16 +69,19 @@ tr.cps td.cps_centre {
 tr.cps td a {
   display: block;
   padding: 7px 0 7px 35px; /* The 35px allows the arrow to be on the left and the text next to it. */
-  background: transparent url(../images/arrow_up.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.  This is shown by default when JavaScript is disabled. */
+  background: transparent url(../images/arrow_open.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.  This is shown by default when JavaScript is disabled. */
   text-align: left;
   width: auto;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
 }
 
 body.jsenabled tr.cps td a.toggle_open {
-  background: transparent url(../images/arrow_up.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.   This is shown by default when JavaScript is enabled. */
+  background: transparent url(../images/arrow_open.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.   This is shown by default when JavaScript is enabled. */
 }
 body.jsenabled tr.cps td a.toggle_closed {
-  background: transparent url(../images/arrow_down.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.   This is shown by default when JavaScript is enabled. */
+  background: transparent url(../images/arrow_closed.png) no-repeat 5px 45%; /* Position the arrow roughly in the centre of the Toggle.   This is shown by default when JavaScript is enabled. */
 }
 
 /* -- Toggle text -- */
@@ -126,15 +134,14 @@ body.jsenabled .togglesection {
   padding: 7px 7px 7px 30px; /* The 30px allows the arrow to be on the left and the text next to it. */
   text-align: left;
   width: 35px;
-  text-decoration: none;
 }
 
 #toggle-all td a.on {
-  background: transparent url(../images/arrow_down.png) no-repeat 0px 45%; 
+  background: transparent url(../images/arrow_open.png) no-repeat 0px 45%;
 }
 
 #toggle-all td a.off {
-  background: transparent url(../images/arrow_up.png) no-repeat 0px 45%; 
+  background: transparent url(../images/arrow_closed.png) no-repeat 0px 45%;
 }
 
 /* Set settings */

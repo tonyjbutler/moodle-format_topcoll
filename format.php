@@ -193,31 +193,20 @@ tr.cps td a:hover, body.jsenabled tr.cps td a:hover {
 </style>
 <?php
 
-if ($userisediting && has_capability('moodle/course:update', $coursecontext)) {
-    echo '<tr class="section main">';
-    echo '<td class="left side">&nbsp;</td>';
-    echo '<td class="content">';
-    echo '<a title="' . get_string('settings') . '" href="format/topcoll/forms/settings.php?id=' . $course->id . '&sesskey=' . sesskey() . '"><div id="set-settings"></div></a>';
-    echo '</td>';
-    echo '<td class="right side">&nbsp;</td>';
-    echo '</tr>';
-    echo '<tr class="section separator"><td colspan="3" class="spacer"></td></tr>';
-}
-
 // Print Section 0 with general activities
 $section = 0;
 $thissection = $sections[$section];
 unset($sections[0]);
 
 if ($thissection->summary or $thissection->sequence or $userisediting) {
-    echo '<tr id="section-0" class="section main">';
-    echo '<td class="left side">&nbsp;</td>';
-    echo '<td class="content">';
 
     if (!is_null($thissection->name)) { // MDL-20628
         echo $OUTPUT->heading(format_string($thissection->name, true, array('context' => $coursecontext)), 3, 'sectionname'); // MDL-29188
     }
 
+    echo '<tr id="section-0" class="section main">';
+    echo '<td class="left side">&nbsp;</td>';
+    echo '<td class="content">';
     echo '<div class="summary">';
 
     $summarytext = file_rewrite_pluginfile_urls($thissection->summary, 'pluginfile.php', $coursecontext->id, 'course', 'section', $thissection->id);
@@ -258,9 +247,9 @@ if (($screenreader == false) && ($course->numsections > 1)) { // No need to show
     $toggletext = get_string('topcolltoggle', 'format_topcoll'); // The word 'Toggle'.
     if (empty($displaysection)) { // or showing only one section.
         // Toggle all.
-        echo '<tr id="toggle-all" class="section main">';
+        echo '<tr id="toggle-all">';
         echo '<td class="left side toggle-all" colspan="2">';
-        echo '<h4><a class="on" href="#" onclick="all_opened(); return false;">' . get_string('topcollopened', 'format_topcoll') . '</a><a class="off" href="#" onclick="all_closed(); return false;">' . get_string('topcollclosed', 'format_topcoll') . '</a>' . get_string('topcollall', 'format_topcoll') . '</h4>';
+        echo '<a class="on" href="#" onclick="all_opened(); return false;">' . get_string('topcollopened', 'format_topcoll') . '</a><a class="off" href="#" onclick="all_closed(); return false;">' . get_string('topcollclosed', 'format_topcoll') . '</a>';
         echo '</td>';
         echo '<td class="right side">&nbsp;</td>';
         echo '</tr>';
