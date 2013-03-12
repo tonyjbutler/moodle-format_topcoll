@@ -37,7 +37,7 @@ tr.cps {
 /* -- Set the clickable element of the Toggle -- */
 tr.cps td a {
 	width: 100%;
-	height: 22px;
+	height: 25px;
 	padding: 7px 0px 0px 35px;
 	zoom: 100%; 
 }
@@ -49,7 +49,7 @@ tr.cps td a {
 
 /* -- The table data section of a Toggle's row -- */
 tr.cps td {
-	height: 22px;
+	height: 25px;
 }
 
 /* -- Toggle All text -- */

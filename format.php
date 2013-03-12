@@ -201,7 +201,11 @@ unset($sections[0]);
 if ($thissection->summary or $thissection->sequence or $userisediting) {
 
     if (!is_null($thissection->name)) { // MDL-20628
+        echo '<tr id="sectionhead-' . $section . '">';
+        echo '<td colspan="3">';
         echo $OUTPUT->heading(format_string($thissection->name, true, array('context' => $coursecontext)), 3, 'sectionname'); // MDL-29188
+        echo '</td>';
+        echo '</tr>';
     }
 
     echo '<tr id="section-0" class="section main">';
